@@ -2,7 +2,7 @@
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww15280\viewh9720\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \{ 25.5.20 \}\
@@ -22,4 +22,18 @@ implemented:\
 implemented:\
 \
 \'95 internal / external clock (toggle with button B)\
-\'95 now RATE controls the rate of the coin toss in the external clock mode.}
+\'95 now RATE controls the rate of the coin toss in the external clock mode.\
+\
+\{ 24.6.20 \}\
+\
+in FREE (internal clock) mode:\
+in out4 (dac~ 6) the simple, straight clock.\
+\
+outs t1,t2,t3 are as before, but now knob 2 (adc~ 4) regulates the number of repetitions for each trigger, in this case from 1 to 10.\
+\
+So, when knob 2 is set to 0, we\'92ll have zero repetitions all the time (classic behaviour).\
+\
+ATTENZIONE: [r~ MainClock] is not conditioned to the button B. Meaning that it will play in MIDI mode as well as in internal clock mode. FIX!\
+\
+IMPORTANTE: to be implemented: button A for \'91recording\'92 triggers! <3\
+}
