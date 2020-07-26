@@ -27,13 +27,17 @@ implemented:\
 \{ 24.6.20 \}\
 \
 in FREE (internal clock) mode:\
-in out4 (dac~ 6) the simple, straight clock.\
+out4 (dac~ 6) performs the simple, straight clock.\
 \
-outs t1,t2,t3 are as before, but now knob 2 (adc~ 4) regulates the number of repetitions for each trigger, in this case from 1 to 10.\
+outs t1,t2,t3 are as before, but now knob 2 (adc~ 4) regulates the number of possible repetitions for each trigger, in this case from 1 to 10.\
+This number is the upper boundary, since at every start of a clock trig it chose a number (of repetitions) randomly and then performs it.\
 \
-So, when knob 2 is set to 0, we\'92ll have zero repetitions all the time (classic behaviour).\
+So, when knob 2 is set to 0, we\'92ll have zero repetitions all the time (classic behaviour). \'97BUG HERE\
 \
 ATTENZIONE: [r~ MainClock] is not conditioned to the button B. Meaning that it will play in MIDI mode as well as in internal clock mode. FIX!\
 \
 IMPORTANTE: to be implemented: button A for \'91recording\'92 triggers! <3\
-}
+\
+\{ 26.7.20 \}\
+\
+implemented LED following trigs}
